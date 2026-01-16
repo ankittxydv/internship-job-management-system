@@ -9,7 +9,11 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'https://expense-tracker-five-dusky-59.vercel.app',
+    }
+));
 app.use(express.json());
 
 // Routes
